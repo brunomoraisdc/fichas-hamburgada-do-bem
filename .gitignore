@@ -1,0 +1,35 @@
+
+venv/
+.venv/
+env/
+
+.env
+
+*.db
+
+# chave da conta de serviço do Google (caso salva dentro do projeto)
+*service-account*.json
+*service_account*.json
+*credentials*.json
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.vscode/
+.claude/settings.local.json
+
+.DS_Store
+Thumbs.db
+
+# fichas escaneadas reais (dado pessoal de criança/responsável) e exports
+# gerados a partir delas — nunca devem ser commitados
+fichas/
+relatorio_fichas.xlsx
+*.xlsx
+
+# notas operacionais de desenvolvimento — ficam só locais, não fazem parte
+# da apresentação pública do projeto
+CLAUDE.md
+RESSALVAS.md

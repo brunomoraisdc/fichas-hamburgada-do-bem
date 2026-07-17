@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Hamburgada do Bem - Fichas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Fichas — Hamburgada do Bem</h1>
+  </header>
+
+  <main class="app-main">
+
+    <section id="screen-capture" class="screen">
+      <p>Tire uma foto da ficha de autorização preenchida.</p>
+      <label class="btn btn-primary btn-big" for="file-input">Tirar foto da ficha</label>
+      <input type="file" id="file-input" accept="image/*" capture="environment" hidden>
+    </section>
+
+    <section id="screen-preview" class="screen" hidden>
+      <p>Confira se a ficha está legível antes de enviar.</p>
+      <img id="preview-image" class="preview-image" alt="Pré-visualização da ficha">
+      <div class="btn-row">
+        <button type="button" id="btn-retake" class="btn btn-secondary">Tirar outra</button>
+        <button type="button" id="btn-send" class="btn btn-primary">Enviar</button>
+      </div>
+    </section>
+
+    <section id="screen-processing" class="screen" hidden>
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Processando ficha com IA...</p>
+    </section>
+
+    <section id="screen-validation" class="screen" hidden>
+      <p>Confira os dados extraídos. Campos marcados com ⚠️ vieram incertos da leitura automática — revise com atenção antes de confirmar.</p>
+      <form id="form-validation">
+        <div id="validation-fields"></div>
+        <div class="btn-row">
+          <button type="button" id="btn-cancel-validation" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Confirmar e salvar</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="screen-success" class="screen" hidden>
+      <p class="status-icon">✅</p>
+      <p>Ficha salva com sucesso!</p>
+      <button type="button" id="btn-new-after-success" class="btn btn-primary btn-big">Nova ficha</button>
+    </section>
+
+    <section id="screen-error" class="screen" hidden>
+      <p class="status-icon">⚠️</p>
+      <p id="error-message"></p>
+      <button type="button" id="btn-new-after-error" class="btn btn-primary btn-big">Tentar novamente</button>
+    </section>
+
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

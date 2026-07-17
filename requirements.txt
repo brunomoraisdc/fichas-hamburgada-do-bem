@@ -1,0 +1,10 @@
+python-dotenv
+google.genai
+pillow
+pandas
+openpyxl
+fastapi
+uvicorn[standard]
+python-multipart
+gspread
+google-auth
